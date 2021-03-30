@@ -1,0 +1,9 @@
+@function vmax($pixels, $context: $full-width) {
+  @return #{($pixels/$context)* 100}vmax
+}
+@function vw($pixels, $context: $full-width) {
+  @return #{($pixels/$context)* 100}vw
+}
+@function vh($pixels, $context: $screen-height) {
+  @return #{($pixels/$context)* 100}vh
+}

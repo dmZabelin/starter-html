@@ -1,0 +1,16 @@
+extends ../template/main-template.pug
+block variables
+	-var title = 'Start project'
+
+prepend styles
+
+block header
+	include ../snippets/header.pug	
+
+block content
+	include ../snippets/main-content.pug
+
+block footer
+	include ../snippets/footer.pug
+
+prepend scripts

@@ -1,0 +1,68 @@
+/* == FLEX BOX == */
+@mixin flex-center {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-start {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+@mixin flex-end {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+/* == TRANSITION == */
+@mixin transition($timing, $duration) {
+	-webkit-transition: all $timing $duration;
+	-moz-transition: all $timing $duration;
+	-ms-transition: all $timing $duration;
+	-o-transition: all $timing $duration;
+	transition: all $timing $duration;
+}
+
+/* == PLACEHOLDER STYLES == */
+@mixin placeholder($color, $size) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size: $size;
+	}
+	&:-moz-placeholder {
+		color: $color;
+		font-size: $size;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		font-size: $size;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		font-size: $size;
+	}
+}
+
+/* ** FONTAWESOME ** */
+@mixin awesome-free($content) {
+	content: $content;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}

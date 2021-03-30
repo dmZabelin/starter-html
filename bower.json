@@ -1,0 +1,26 @@
+{
+	"name": "your_site_name",
+	"description": "",
+	"main": "",
+	"authors": [
+		"DmZabelin <dm.regard@gmail.com>"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "latest"
+	},
+	"overrides": {
+		"jquery": {
+			"main": [
+				"./dist/jquery.min.js"
+			]
+		}
+	}
+}

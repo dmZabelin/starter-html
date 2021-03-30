@@ -1,0 +1,24 @@
+@import "vars";
+@import "mixins";
+@import "reset";
+@import "libs";
+@import "fonts";
+@import "functions";
+@import "base";
+@import "animation";
+
+@import "header-styles";
+
+/*===============
+= = = PAGES = = =
+=================*/
+
+@import "footer-styles";
+@import "popup-styles";
+
+/* == PRIORITY STYLES == */
+@import "priority";
+
+/* == MEDIA QUERIES == */
+//@import 'responsive-large';
+@import "responsive";
