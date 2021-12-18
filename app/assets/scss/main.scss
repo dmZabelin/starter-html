@@ -9,16 +9,9 @@
 
 @import "header-styles";
 
-/*===============
-= = = PAGES = = =
-=================*/
-
 @import "footer-styles";
 @import "popup-styles";
 
-/* == PRIORITY STYLES == */
 @import "priority";
 
-/* == MEDIA QUERIES == */
-//@import 'responsive-large';
 @import "responsive";
