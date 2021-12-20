@@ -32,6 +32,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-fonter": "^0.3.0",
+    "gulp-format-html": "^1.2.5",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
@@ -46,9 +47,9 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
+    "require-dir": "^1.2.0",
     "sass": "^1.45.0",
     "webpack": "^5.65.0",
-    "webpack-stream": "^7.0.0",
-    "require-dir": "^1.2.0"
+    "webpack-stream": "^7.0.0"
   }
 }

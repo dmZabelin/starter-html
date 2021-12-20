@@ -3,15 +3,11 @@ const pathDest = './dist';
 
 module.exports = {
     root: pathDest,
-    html: {
-        src: pathSrc + '/*.html',
-        watch: pathSrc + '/**/*.html',
-        dest: pathDest
-    },
     pug: {
         src: pathSrc + '/pug/pages/*.pug',
         watch: pathSrc + '/pug/**/*.pug',
-        dest: pathSrc
+        dest: pathSrc,
+        destHtml: pathDest
     },
     scss: {
         src: pathSrc + '/assets/scss/*.scss',

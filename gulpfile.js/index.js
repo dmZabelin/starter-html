@@ -15,9 +15,7 @@ const task = reguireDir('./tasks', {recurse: true});
 // Наблюдатель
 const watcher = () => {
     $.gulp.watch($.path.pug.watch, task.pugBuild);
-    $.gulp.watch($.path.html.watch, task.htmlBuild);
     $.gulp.watch($.path.scss.watch, { readDelay: 1000 }, task.scssBuild);
-    $.gulp.watch($.path.css.watch, task.cssBuild);
     $.gulp.watch($.path.js.watch, task.jsBuild);
     $.gulp.watch($.path.img.watch, task.imgBuild);
 }
@@ -25,9 +23,7 @@ const watcher = () => {
 // задачи
 exports.server = task.server;
 exports.pug = task.pugBuild;
-exports.html = task.htmlBuild;
 exports.scss = task.scssBuild;
-exports.css = task.cssBuild;
 exports.js = task.jsBuild;
 exports.img = task.imgBuild;
 exports.font = task.fontBuild;
@@ -37,7 +33,7 @@ exports.clear = task.clear;
 // Сборка
 const build = $.gulp.series (
     task.clear,
-    $.gulp.parallel(task.pugBuild, task.htmlBuild, task.scssBuild, task.cssBuild, task.jsBuild, task.imgBuild, task.fontBuild),
+    $.gulp.parallel(task.pugBuild, task.scssBuild, task.jsBuild, task.imgBuild, task.fontBuild),
 )
 
 const dev = $.gulp.series (

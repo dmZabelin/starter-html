@@ -9,7 +9,7 @@ module.exports = {
         removeComments: isProd
     },
     pugs: {
-        pretty: isDev
+        pretty: true
     },
     sass: {
         includePaths: './node_modules/'
