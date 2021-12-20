@@ -1,0 +1,54 @@
+{
+  "name": "starter-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmZabelin/starter-html.git"
+  },
+  "author": "Dmitry Zabelin <https://dmzabelin.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/dmZabelin/starter-html#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp-webp-html": "^1.0.2",
+    "sass": "^1.45.0",
+    "webpack": "^5.65.0",
+    "webpack-stream": "^7.0.0",
+    "require-dir": "^1.2.0"
+  }
+}
