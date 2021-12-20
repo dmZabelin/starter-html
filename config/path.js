@@ -1,7 +1,7 @@
 const pathSrc = './app';
 const pathDest = './dist';
 
-module.exports = {
+export default {
     root: pathDest,
     pug: {
         src: pathSrc + '/pug/pages/*.pug',
@@ -30,8 +30,8 @@ module.exports = {
         dest: pathDest + '/assets/img/'
     },
     font: {
-        src: pathSrc + '/assets/fonts/*.otf',
-        watch: pathSrc + '/assets/fonts/**/*.otf',
+        src: pathSrc + '/assets/fonts/*.{ttf, otf}',
+        watch: pathSrc + '/assets/fonts/**/*.{ttf, otf}',
         dest: pathDest + '/assets/fonts/'
     }
 }

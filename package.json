@@ -2,6 +2,7 @@
   "name": "starter-html",
   "version": "2.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "browserslist": [
     "last 3 versions"
@@ -35,7 +36,8 @@
     "gulp-format-html": "^1.2.5",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-load-plugins": "^2.0.7",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
@@ -51,5 +53,8 @@
     "sass": "^1.45.0",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "imagemin": "^8.0.1"
   }
 }
