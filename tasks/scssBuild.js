@@ -1,19 +1,19 @@
-import gulp from 'gulp';
+import gulp from "gulp";
 
 // Конфигурации и пути
-import path from '../config/path.js';
-import app from '../config/app.js';
+import path from "../config/path.js";
+import app from "../config/app.js";
 
 // Плагины
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+import plumber from "gulp-plumber";
+import notify from "gulp-notify";
 import gulpIf from "gulp-if";
 
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
+import dartSass from "sass";
+import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass);
-import autoprefixer from 'gulp-autoprefixer';
-import shortHand from 'gulp-shorthand';
+import autoprefixer from "gulp-autoprefixer";
+import shortHand from "gulp-shorthand";
 import webpCSS from "gulp-webp-css";
 import cleanCSS from "gulp-clean-css";
 import rename from "gulp-rename";
@@ -22,7 +22,7 @@ export default () => {
     return gulp.src(path.scss.src, {sourcemaps: app.isDev})
     .pipe(plumber({
         errorHandler: notify.onError(error => ({
-            title: 'SCSS',
+            title: "SCSS",
             message: error.message,
         }))
     }))

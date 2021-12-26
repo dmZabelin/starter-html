@@ -1,7 +1,7 @@
 {
   "name": "starter-html",
   "version": "2.0.0",
-  "description": "",
+  "description": "Стартовый шаблон.",
   "type": "module",
   "main": "index.js",
   "browserslist": [
@@ -48,9 +48,9 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
-    "gulp-webp-html": "^1.0.2",
+    "gulp-webp-for-html": "^1.0.4",
     "require-dir": "^1.2.0",
-    "sass": "^1.45.0",
+    "sass": "^1.45.1",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
   },

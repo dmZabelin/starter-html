@@ -1,22 +1,22 @@
-import gulp from 'gulp';
+import gulp from "gulp";
 
 // Конфигурации и пути
-import path from '../config/path.js';
-import app from '../config/app.js';
+import path from "../config/path.js";
+import app from "../config/app.js";
 
 // Плагины
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+import plumber from "gulp-plumber";
+import notify from "gulp-notify";
 
-import newer from 'gulp-newer';
-import fonter from 'gulp-fonter';
-import ttf2woff2 from 'gulp-ttf2woff2';
+import newer from "gulp-newer";
+import fonter from "gulp-fonter";
+import ttf2woff2 from "gulp-ttf2woff2";
 
 export default () => {
     return gulp.src(path.font.src)
     .pipe(plumber({
         errorHandler: notify.onError(error => ({
-            title: 'IMG',
+            title: "FONT",
             message: error.message,
         }))
     }))

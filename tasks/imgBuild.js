@@ -1,23 +1,23 @@
-import gulp from 'gulp';
+import gulp from "gulp";
 
 // Конфигурации и пути
-import path from '../config/path.js';
-import app from '../config/app.js';
+import path from "../config/path.js";
+import app from "../config/app.js";
 
 // Плагины
-import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
+import plumber from "gulp-plumber";
+import notify from "gulp-notify";
 import gulpIf from "gulp-if";
 
-import imagemin from 'gulp-imagemin';
-import newer from 'gulp-newer';
-import webp from 'gulp-webp';
+import imagemin from "gulp-imagemin";
+import newer from "gulp-newer";
+import webp from "gulp-webp";
 
 export default () => {
     return gulp.src(path.img.src)
     .pipe(plumber({
         errorHandler: notify.onError(error => ({
-            title: 'IMG',
+            title: "IMG",
             message: error.message,
         }))
     }))

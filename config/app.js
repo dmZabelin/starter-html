@@ -8,11 +8,8 @@ export default {
         collapseWhitespace: isProd,
         removeComments: isProd
     },
-    pugs: {
-        pretty: true
-    },
     sass: {
-        includePaths: './node_modules/'
+        includePaths: "./node_modules/"
     },
     autoprefixer: {
         cascade: isProd
@@ -21,15 +18,15 @@ export default {
         level: 2
     },
     rename: {
-        suffix: '.min',
-        extname: '.css'
+        suffix: ".min",
+        extname: ".css"
     },
     renameJS: {
-        suffix: '.min',
-        extname: '.js'
+        suffix: ".min",
+        extname: ".js"
     },
     webpack: {
-        mode: isProd ? 'production' : 'development'
+        mode: isProd ? "production" : "development"
     },
     imagemin: {
         verbose: true
