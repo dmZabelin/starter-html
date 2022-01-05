@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol, p, h1, h2, h3, button, fieldset, legend {
+  padding: 0;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 0;
+}
