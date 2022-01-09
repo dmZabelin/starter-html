@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin:0;
+  min-width: 320px;
+  line-height: 1;
+  &.hidden {
+    overflow-y: hidden;
+  }
+}
+.container {
+  width: 120rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
