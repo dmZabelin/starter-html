@@ -10,6 +10,7 @@ import libsCss from "./tasks/libs_css.js";
 import libsJs from "./tasks/libs_js.js";
 import pugBuild from "./tasks/pugBuild.js";
 import fontBuild from "./tasks/fontBuild.js";
+import { woff2 } from "./tasks/fontBuild.js";
 import jsBuild from "./tasks/jsBuild.js";
 import imgBuild from "./tasks/imgBuild.js";
 import scssBuild from "./tasks/scssBuild.js";
@@ -32,6 +33,7 @@ const watcher = () => {
     gulp.watch(path.libsCss.watch, libsCss);
     gulp.watch(path.libsJs.watch, libsJs);
     gulp.watch(path.font.watch, fontBuild);
+    gulp.watch(path.font.watch, woff2);
     gulp.watch(path.js.watch, jsBuild).on("all", browserSync.reload);
     gulp.watch(path.img.watch, imgBuild).on("all", browserSync.reload);
     gulp.watch(path.scss.watch, scssBuild).on("all", browserSync.reload);
@@ -42,6 +44,7 @@ export { libsCss };
 export { libsJs };
 export { pugBuild };
 export { fontBuild };
+export { woff2 };
 export { jsBuild };
 export { imgBuild };
 export { scssBuild };
@@ -50,7 +53,7 @@ export { clear };
 // Сборка
 const build = gulp.series (
     clear,
-    gulp.parallel(pugBuild, scssBuild, fontBuild, jsBuild, imgBuild, libsCss, libsJs),
+    gulp.parallel(pugBuild, scssBuild, fontBuild, woff2, jsBuild, imgBuild, libsCss, libsJs),
 );
 const dev = gulp.series (
     build,

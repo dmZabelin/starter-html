@@ -12,10 +12,12 @@ import gulpIf from "gulp-if";
 import rename from "gulp-rename";
 import babel from "gulp-babel";
 import webpack from "webpack-stream";
+import sourcemaps from "gulp-sourcemaps";
 
 //Задача
 export default () => {
-    return gulp.src(path.js.src, {sourcemaps: app.isDev})
+    return gulp.src(path.js.src)
+	 .pipe(gulpIf(app.isDev, sourcemaps.init()))
     .pipe(plumber({
         errorHandler: notify.onError(error => ({
             title: "JS",
@@ -25,5 +27,6 @@ export default () => {
     .pipe(gulpIf(app.isProd, babel()))
     .pipe(webpack(app.webpack))
     .pipe(rename(app.renameJS))
-    .pipe(gulp.dest(path.js.dest, {sourcemaps: app.isDev}))
+	 .pipe(gulpIf(app.isDev, sourcemaps.write()))
+    .pipe(gulp.dest(path.js.dest))
 };

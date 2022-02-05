@@ -1,5 +1,7 @@
 .idea
 node_modules
 package-lock.json
-public
 src/index.html
+src/assets/img/
+src/assets/fonts/
+src/libs/

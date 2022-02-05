@@ -17,9 +17,11 @@ import shortHand from "gulp-shorthand";
 import webpCSS from "gulp-webp-css";
 import cleanCSS from "gulp-clean-css";
 import rename from "gulp-rename";
+import sourcemaps from "gulp-sourcemaps";
 
 export default () => {
-    return gulp.src(path.scss.src, {sourcemaps: app.isDev})
+    return gulp.src(path.scss.src)
+	 .pipe(gulpIf(app.isDev, sourcemaps.init()))
     .pipe(plumber({
         errorHandler: notify.onError(error => ({
             title: "SCSS",
@@ -30,8 +32,10 @@ export default () => {
     .pipe(gulpIf(app.isProd, webpCSS()))
     .pipe(gulpIf(app.isProd, autoprefixer(app.autoprefixer)))
     .pipe(gulpIf(app.isProd, shortHand()))
-    .pipe(gulp.dest(path.scss.dest), {sourcemaps: app.isDev})
+	 .pipe(gulpIf(app.isDev, sourcemaps.write()))
+    .pipe(gulp.dest(path.scss.dest))
     .pipe(gulpIf(app.isProd, cleanCSS(app.cleanCSS)))
     .pipe(rename(app.rename))
-    .pipe(gulp.dest(path.css.dest), {sourcemaps: app.isDev})
+	 .pipe(gulpIf(app.isDev, sourcemaps.write()))
+    .pipe(gulp.dest(path.css.dest))
 };

@@ -23,6 +23,17 @@ export default () => {
     .pipe(newer(path.font.dest))
     .pipe(fonter(app.fonter))
     .pipe(gulp.dest(path.font.dest))
+};
+
+export let woff2 = () => {
+    return gulp.src(path.font.src)
+    .pipe(plumber({
+        errorHandler: notify.onError(error => ({
+            title: "FONT",
+            message: error.message,
+        }))
+    }))
+    .pipe(newer(path.font.dest))
     .pipe(ttf2woff2())
     .pipe(gulp.dest(path.font.dest))
 };
